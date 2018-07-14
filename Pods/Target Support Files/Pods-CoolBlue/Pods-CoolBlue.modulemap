@@ -1,0 +1,6 @@
+framework module Pods_CoolBlue {
+  umbrella header "Pods-CoolBlue-umbrella.h"
+
+  export *
+  module * { export * }
+}

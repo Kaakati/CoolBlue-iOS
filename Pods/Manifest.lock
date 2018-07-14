@@ -1,0 +1,42 @@
+PODS:
+  - AARatingBar (0.1.0)
+  - Kingfisher (4.7.0)
+  - SKActivityIndicatorView (0.1.0)
+  - SwifterSwift (4.3.0):
+    - SwifterSwift/AppKit (= 4.3.0)
+    - SwifterSwift/CoreGraphics (= 4.3.0)
+    - SwifterSwift/CoreLocation (= 4.3.0)
+    - SwifterSwift/Foundation (= 4.3.0)
+    - SwifterSwift/MapKit (= 4.3.0)
+    - SwifterSwift/SwiftStdlib (= 4.3.0)
+    - SwifterSwift/UIKit (= 4.3.0)
+  - SwifterSwift/AppKit (4.3.0)
+  - SwifterSwift/CoreGraphics (4.3.0)
+  - SwifterSwift/CoreLocation (4.3.0)
+  - SwifterSwift/Foundation (4.3.0)
+  - SwifterSwift/MapKit (4.3.0)
+  - SwifterSwift/SwiftStdlib (4.3.0)
+  - SwifterSwift/UIKit (4.3.0)
+
+DEPENDENCIES:
+  - AARatingBar
+  - Kingfisher (~> 4.0)
+  - SKActivityIndicatorView (~> 0.1.0)
+  - SwifterSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AARatingBar
+    - Kingfisher
+    - SKActivityIndicatorView
+    - SwifterSwift
+
+SPEC CHECKSUMS:
+  AARatingBar: dd2f4b489478f5206930bb5f8f67b4db476265c8
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  SKActivityIndicatorView: f46936f760d33eb8235333242269bf01cc9248ae
+  SwifterSwift: f3fce2b9fc5b9d8fda6eec33825e5243c60aebba
+
+PODFILE CHECKSUM: 3247b5a369617a2f55ba04dacfaf8c46598558da
+
+COCOAPODS: 1.5.3
