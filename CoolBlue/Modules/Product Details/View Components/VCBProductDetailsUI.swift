@@ -1,5 +1,5 @@
 //
-//  ______VARIABLE_productName:identifier______
+//  
 //  CoolBlue
 //
 //  Created Mohamad Kaakati on 14/07/2018.

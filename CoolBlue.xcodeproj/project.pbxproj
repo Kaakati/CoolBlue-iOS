@@ -38,6 +38,11 @@
 		2BD5094A20FA3F90004804B5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5094620FA3F8F004804B5 /* HTTPMethod.swift */; };
 		2BD5094C20FA40A5004804B5 /* CBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5094B20FA40A5004804B5 /* CBError.swift */; };
 		2BD5094E20FA42A2004804B5 /* CBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5094D20FA42A2004804B5 /* CBRouter.swift */; };
+		2BD5095220FA4D7D004804B5 /* PromoIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5095120FA4D7D004804B5 /* PromoIcon.swift */; };
+		2BD5095520FA5A6D004804B5 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5095420FA5A6D004804B5 /* BaseViewProtocol.swift */; };
+		AB684C46F95198541A34CB90 /* Pods_CoolBlue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAF65231328B108A51C98EB /* Pods_CoolBlue.framework */; };
+		CDBCE86E8282FBC2DBD8ED68 /* Pods_CoolBlueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C2583F93B7A9A4A9D33E63 /* Pods_CoolBlueTests.framework */; };
+		EE49EE1E66148312FE49DA17 /* Pods_CoolBlueUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF45C63FBF215C5D279C306 /* Pods_CoolBlueUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +100,17 @@
 		2BD5094620FA3F8F004804B5 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		2BD5094B20FA40A5004804B5 /* CBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBError.swift; sourceTree = "<group>"; };
 		2BD5094D20FA42A2004804B5 /* CBRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBRouter.swift; sourceTree = "<group>"; };
+		2BD5095120FA4D7D004804B5 /* PromoIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoIcon.swift; sourceTree = "<group>"; };
+		2BD5095420FA5A6D004804B5 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
+		2FF45C63FBF215C5D279C306 /* Pods_CoolBlueUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolBlueUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6075538A91D07992D0DE9BE6 /* Pods-CoolBlueUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueUITests/Pods-CoolBlueUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6AAF65231328B108A51C98EB /* Pods_CoolBlue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolBlue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7006625A6ED327F5B9EE3EDF /* Pods-CoolBlueUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueUITests/Pods-CoolBlueUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		996132BF399DC91EDF865615 /* Pods-CoolBlueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueTests/Pods-CoolBlueTests.release.xcconfig"; sourceTree = "<group>"; };
+		BCD105A48980D99F3D990560 /* Pods-CoolBlue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlue/Pods-CoolBlue.debug.xcconfig"; sourceTree = "<group>"; };
+		C0C2583F93B7A9A4A9D33E63 /* Pods_CoolBlueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolBlueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFECE30F863070901702E0E2 /* Pods-CoolBlueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueTests/Pods-CoolBlueTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E2A3010A37425E1FF9012B18 /* Pods-CoolBlue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlue.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlue/Pods-CoolBlue.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB684C46F95198541A34CB90 /* Pods_CoolBlue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDBCE86E8282FBC2DBD8ED68 /* Pods_CoolBlueTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE49EE1E66148312FE49DA17 /* Pods_CoolBlueUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +148,8 @@
 				2BD508F620FA3318004804B5 /* CoolBlueTests */,
 				2BD5090120FA3318004804B5 /* CoolBlueUITests */,
 				2BD508E020FA3317004804B5 /* Products */,
+				8EB3DDAB458C21EE74EAC1D1 /* Pods */,
+				548D2B3DAC3DCA1219EEF331 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +197,7 @@
 		2BD5091020FA33DF004804B5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2BD5095320FA5A3D004804B5 /* Base */,
 				2BD5091120FA3595004804B5 /* Product Search */,
 				2BD5091220FA35A8004804B5 /* Product Details */,
 			);
@@ -185,9 +207,9 @@
 		2BD5091120FA3595004804B5 /* Product Search */ = {
 			isa = PBXGroup;
 			children = (
+				2BD5094F20FA4744004804B5 /* View Components */,
 				2BD5091320FA3653004804B5 /* VCBSearch.swift */,
 				2BD5091420FA3653004804B5 /* CCBSearch.swift */,
-				2BD5091520FA3653004804B5 /* VCBSearchUI.swift */,
 				2BD5091620FA3653004804B5 /* RCBSearch.swift */,
 				2BD5091720FA3653004804B5 /* ECBSearch.swift */,
 				2BD5091820FA3653004804B5 /* PCBSearch.swift */,
@@ -199,9 +221,9 @@
 		2BD5091220FA35A8004804B5 /* Product Details */ = {
 			isa = PBXGroup;
 			children = (
+				2BD5095020FA4755004804B5 /* View Components */,
 				2BD5092120FA36FF004804B5 /* VCBProductDetails.swift */,
 				2BD5092220FA36FF004804B5 /* CCBProductDetails.swift */,
-				2BD5092320FA36FF004804B5 /* VCBProductDetailsUI.swift */,
 				2BD5092420FA36FF004804B5 /* RCBProductDetails.swift */,
 				2BD5092520FA36FF004804B5 /* ECBProductDetails.swift */,
 				2BD5092620FA36FF004804B5 /* PCBProductDetails.swift */,
@@ -231,6 +253,7 @@
 				2BD5093920FA3DAA004804B5 /* ReviewSummary.swift */,
 				2BD5093720FA3D9D004804B5 /* Specification.swift */,
 				2BD5093F20FA3DCE004804B5 /* Availability.swift */,
+				2BD5095120FA4D7D004804B5 /* PromoIcon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -253,6 +276,53 @@
 			path = Themes;
 			sourceTree = "<group>";
 		};
+		2BD5094F20FA4744004804B5 /* View Components */ = {
+			isa = PBXGroup;
+			children = (
+				2BD5091520FA3653004804B5 /* VCBSearchUI.swift */,
+			);
+			path = "View Components";
+			sourceTree = "<group>";
+		};
+		2BD5095020FA4755004804B5 /* View Components */ = {
+			isa = PBXGroup;
+			children = (
+				2BD5092320FA36FF004804B5 /* VCBProductDetailsUI.swift */,
+			);
+			path = "View Components";
+			sourceTree = "<group>";
+		};
+		2BD5095320FA5A3D004804B5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2BD5095420FA5A6D004804B5 /* BaseViewProtocol.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		548D2B3DAC3DCA1219EEF331 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AAF65231328B108A51C98EB /* Pods_CoolBlue.framework */,
+				C0C2583F93B7A9A4A9D33E63 /* Pods_CoolBlueTests.framework */,
+				2FF45C63FBF215C5D279C306 /* Pods_CoolBlueUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EB3DDAB458C21EE74EAC1D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCD105A48980D99F3D990560 /* Pods-CoolBlue.debug.xcconfig */,
+				E2A3010A37425E1FF9012B18 /* Pods-CoolBlue.release.xcconfig */,
+				CFECE30F863070901702E0E2 /* Pods-CoolBlueTests.debug.xcconfig */,
+				996132BF399DC91EDF865615 /* Pods-CoolBlueTests.release.xcconfig */,
+				7006625A6ED327F5B9EE3EDF /* Pods-CoolBlueUITests.debug.xcconfig */,
+				6075538A91D07992D0DE9BE6 /* Pods-CoolBlueUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,9 +330,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BD5090720FA3318004804B5 /* Build configuration list for PBXNativeTarget "CoolBlue" */;
 			buildPhases = (
+				F0BAE247471788E33AF76AEE /* [CP] Check Pods Manifest.lock */,
 				2BD508DB20FA3317004804B5 /* Sources */,
 				2BD508DC20FA3317004804B5 /* Frameworks */,
 				2BD508DD20FA3317004804B5 /* Resources */,
+				4356991B7E5DEACFA9DAF942 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,6 +349,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BD5090A20FA3318004804B5 /* Build configuration list for PBXNativeTarget "CoolBlueTests" */;
 			buildPhases = (
+				AACD68B5A9176351A23EE48C /* [CP] Check Pods Manifest.lock */,
 				2BD508EF20FA3318004804B5 /* Sources */,
 				2BD508F020FA3318004804B5 /* Frameworks */,
 				2BD508F120FA3318004804B5 /* Resources */,
@@ -295,6 +368,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BD5090D20FA3318004804B5 /* Build configuration list for PBXNativeTarget "CoolBlueUITests" */;
 			buildPhases = (
+				7F49F4C2854D5FC8C9DD353F /* [CP] Check Pods Manifest.lock */,
 				2BD508FA20FA3318004804B5 /* Sources */,
 				2BD508FB20FA3318004804B5 /* Frameworks */,
 				2BD508FC20FA3318004804B5 /* Resources */,
@@ -378,6 +452,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4356991B7E5DEACFA9DAF942 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlue/Pods-CoolBlue-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AARatingBar/AARatingBar.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SKActivityIndicatorView/SKActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AARatingBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlue/Pods-CoolBlue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F49F4C2854D5FC8C9DD353F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoolBlueUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AACD68B5A9176351A23EE48C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoolBlueTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0BAE247471788E33AF76AEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoolBlue-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2BD508DB20FA3317004804B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -393,12 +548,14 @@
 				2BD5093C20FA3DB6004804B5 /* Review.swift in Sources */,
 				2BD5094920FA3F90004804B5 /* CoolBlueAPI.swift in Sources */,
 				2BD5093620FA3925004804B5 /* Product.swift in Sources */,
+				2BD5095520FA5A6D004804B5 /* BaseViewProtocol.swift in Sources */,
 				2BD5094020FA3DCE004804B5 /* Availability.swift in Sources */,
 				2BD5092C20FA36FF004804B5 /* ECBProductDetails.swift in Sources */,
 				2BD5091B20FA3653004804B5 /* CCBSearch.swift in Sources */,
 				2BD5091A20FA3653004804B5 /* VCBSearch.swift in Sources */,
 				2BD5093820FA3D9D004804B5 /* Specification.swift in Sources */,
 				2BD5093A20FA3DAA004804B5 /* ReviewSummary.swift in Sources */,
+				2BD5095220FA4D7D004804B5 /* PromoIcon.swift in Sources */,
 				2BD5092D20FA36FF004804B5 /* PCBProductDetails.swift in Sources */,
 				2BD5092820FA36FF004804B5 /* VCBProductDetails.swift in Sources */,
 				2BD5094E20FA42A2004804B5 /* CBRouter.swift in Sources */,
@@ -572,6 +729,7 @@
 		};
 		2BD5090820FA3318004804B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD105A48980D99F3D990560 /* Pods-CoolBlue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -590,6 +748,7 @@
 		};
 		2BD5090920FA3318004804B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2A3010A37425E1FF9012B18 /* Pods-CoolBlue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -608,6 +767,7 @@
 		};
 		2BD5090B20FA3318004804B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFECE30F863070901702E0E2 /* Pods-CoolBlueTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -629,6 +789,7 @@
 		};
 		2BD5090C20FA3318004804B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 996132BF399DC91EDF865615 /* Pods-CoolBlueTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -650,6 +811,7 @@
 		};
 		2BD5090E20FA3318004804B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7006625A6ED327F5B9EE3EDF /* Pods-CoolBlueUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -670,6 +832,7 @@
 		};
 		2BD5090F20FA3318004804B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6075538A91D07992D0DE9BE6 /* Pods-CoolBlueUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

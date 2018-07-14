@@ -12,6 +12,8 @@ import UIKit
 
 class VCBSearch: UIViewController {
 
+    fileprivate var products : [ECBSearch] = []
+    
 	fileprivate let ui = VCBSearchUI()
 	fileprivate var presenter: PCBSearchProtocol!
 
@@ -29,6 +31,15 @@ class VCBSearch: UIViewController {
 }
 
 extension VCBSearch: VCBSearchProtocol {
+    
+    func shouldAppend(products: [ECBSearch]) {
+        self.products.append(contentsOf: products)
+    }
+    
+    func shouldEmptyProductsList() {
+        self.products.removeAll()
+    }
+    
 
 }
 

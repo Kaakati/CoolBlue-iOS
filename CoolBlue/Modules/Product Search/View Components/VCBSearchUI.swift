@@ -1,5 +1,5 @@
 //
-//  ______VARIABLE_productName:identifier______
+//  
 //  CoolBlue
 //
 //  Created Mohamad Kaakati on 14/07/2018.
@@ -20,7 +20,7 @@ protocol VCBSearchUIDataSource {
 }
 
 class VCBSearchUI: UIView {
-
+    
     var delegate: VCBSearchUIDelegate?
     var dataSource: VCBSearchUIDataSource?
 
