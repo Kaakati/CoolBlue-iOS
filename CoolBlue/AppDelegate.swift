@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set Key Window and Screen
         window = UIWindow()
         self.window?.backgroundColor = UIColor.white
-        window?.rootViewController = UINavigationController(rootViewController: ViewController())
+        window?.rootViewController = UINavigationController(rootViewController: VCBSearch())
         window?.makeKeyAndVisible()
         
         return true

@@ -19,6 +19,25 @@
 		2BD5091E20FA3653004804B5 /* ECBSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5091720FA3653004804B5 /* ECBSearch.swift */; };
 		2BD5091F20FA3653004804B5 /* PCBSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5091820FA3653004804B5 /* PCBSearch.swift */; };
 		2BD5092020FA3653004804B5 /* ICBSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5091920FA3653004804B5 /* ICBSearch.swift */; };
+		2BD5092820FA36FF004804B5 /* VCBProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5092120FA36FF004804B5 /* VCBProductDetails.swift */; };
+		2BD5092920FA36FF004804B5 /* CCBProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5092220FA36FF004804B5 /* CCBProductDetails.swift */; };
+		2BD5092A20FA36FF004804B5 /* VCBProductDetailsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5092320FA36FF004804B5 /* VCBProductDetailsUI.swift */; };
+		2BD5092B20FA36FF004804B5 /* RCBProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5092420FA36FF004804B5 /* RCBProductDetails.swift */; };
+		2BD5092C20FA36FF004804B5 /* ECBProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5092520FA36FF004804B5 /* ECBProductDetails.swift */; };
+		2BD5092D20FA36FF004804B5 /* PCBProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5092620FA36FF004804B5 /* PCBProductDetails.swift */; };
+		2BD5092E20FA36FF004804B5 /* ICBProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5092720FA36FF004804B5 /* ICBProductDetails.swift */; };
+		2BD5093420FA37E4004804B5 /* PrimaryTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5093320FA37E4004804B5 /* PrimaryTheme.swift */; };
+		2BD5093620FA3925004804B5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5093520FA3925004804B5 /* Product.swift */; };
+		2BD5093820FA3D9D004804B5 /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5093720FA3D9D004804B5 /* Specification.swift */; };
+		2BD5093A20FA3DAA004804B5 /* ReviewSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5093920FA3DAA004804B5 /* ReviewSummary.swift */; };
+		2BD5093C20FA3DB6004804B5 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5093B20FA3DB6004804B5 /* Review.swift */; };
+		2BD5093E20FA3DC1004804B5 /* ReviewInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5093D20FA3DC1004804B5 /* ReviewInformation.swift */; };
+		2BD5094020FA3DCE004804B5 /* Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5093F20FA3DCE004804B5 /* Availability.swift */; };
+		2BD5094820FA3F90004804B5 /* CBEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5094420FA3F8F004804B5 /* CBEndpoint.swift */; };
+		2BD5094920FA3F90004804B5 /* CoolBlueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5094520FA3F8F004804B5 /* CoolBlueAPI.swift */; };
+		2BD5094A20FA3F90004804B5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5094620FA3F8F004804B5 /* HTTPMethod.swift */; };
+		2BD5094C20FA40A5004804B5 /* CBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5094B20FA40A5004804B5 /* CBError.swift */; };
+		2BD5094E20FA42A2004804B5 /* CBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5094D20FA42A2004804B5 /* CBRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +76,25 @@
 		2BD5091720FA3653004804B5 /* ECBSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECBSearch.swift; sourceTree = "<group>"; };
 		2BD5091820FA3653004804B5 /* PCBSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCBSearch.swift; sourceTree = "<group>"; };
 		2BD5091920FA3653004804B5 /* ICBSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICBSearch.swift; sourceTree = "<group>"; };
+		2BD5092120FA36FF004804B5 /* VCBProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCBProductDetails.swift; sourceTree = "<group>"; };
+		2BD5092220FA36FF004804B5 /* CCBProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCBProductDetails.swift; sourceTree = "<group>"; };
+		2BD5092320FA36FF004804B5 /* VCBProductDetailsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCBProductDetailsUI.swift; sourceTree = "<group>"; };
+		2BD5092420FA36FF004804B5 /* RCBProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCBProductDetails.swift; sourceTree = "<group>"; };
+		2BD5092520FA36FF004804B5 /* ECBProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECBProductDetails.swift; sourceTree = "<group>"; };
+		2BD5092620FA36FF004804B5 /* PCBProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCBProductDetails.swift; sourceTree = "<group>"; };
+		2BD5092720FA36FF004804B5 /* ICBProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICBProductDetails.swift; sourceTree = "<group>"; };
+		2BD5093320FA37E4004804B5 /* PrimaryTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTheme.swift; sourceTree = "<group>"; };
+		2BD5093520FA3925004804B5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		2BD5093720FA3D9D004804B5 /* Specification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specification.swift; sourceTree = "<group>"; };
+		2BD5093920FA3DAA004804B5 /* ReviewSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewSummary.swift; sourceTree = "<group>"; };
+		2BD5093B20FA3DB6004804B5 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		2BD5093D20FA3DC1004804B5 /* ReviewInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewInformation.swift; sourceTree = "<group>"; };
+		2BD5093F20FA3DCE004804B5 /* Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Availability.swift; sourceTree = "<group>"; };
+		2BD5094420FA3F8F004804B5 /* CBEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBEndpoint.swift; sourceTree = "<group>"; };
+		2BD5094520FA3F8F004804B5 /* CoolBlueAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolBlueAPI.swift; sourceTree = "<group>"; };
+		2BD5094620FA3F8F004804B5 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		2BD5094B20FA40A5004804B5 /* CBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBError.swift; sourceTree = "<group>"; };
+		2BD5094D20FA42A2004804B5 /* CBRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +145,11 @@
 		2BD508E120FA3317004804B5 /* CoolBlue */ = {
 			isa = PBXGroup;
 			children = (
+				2BD5093120FA3739004804B5 /* Resources */,
+				2BD5093020FA3728004804B5 /* Models */,
+				2BD5092F20FA371A004804B5 /* Data Layer */,
 				2BD5091020FA33DF004804B5 /* Modules */,
 				2BD508E220FA3317004804B5 /* AppDelegate.swift */,
-				2BD508E920FA3318004804B5 /* Assets.xcassets */,
-				2BD508EB20FA3318004804B5 /* LaunchScreen.storyboard */,
 				2BD508EE20FA3318004804B5 /* Info.plist */,
 			);
 			path = CoolBlue;
@@ -160,8 +199,58 @@
 		2BD5091220FA35A8004804B5 /* Product Details */ = {
 			isa = PBXGroup;
 			children = (
+				2BD5092120FA36FF004804B5 /* VCBProductDetails.swift */,
+				2BD5092220FA36FF004804B5 /* CCBProductDetails.swift */,
+				2BD5092320FA36FF004804B5 /* VCBProductDetailsUI.swift */,
+				2BD5092420FA36FF004804B5 /* RCBProductDetails.swift */,
+				2BD5092520FA36FF004804B5 /* ECBProductDetails.swift */,
+				2BD5092620FA36FF004804B5 /* PCBProductDetails.swift */,
+				2BD5092720FA36FF004804B5 /* ICBProductDetails.swift */,
 			);
 			path = "Product Details";
+			sourceTree = "<group>";
+		};
+		2BD5092F20FA371A004804B5 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2BD5094B20FA40A5004804B5 /* CBError.swift */,
+				2BD5094420FA3F8F004804B5 /* CBEndpoint.swift */,
+				2BD5094620FA3F8F004804B5 /* HTTPMethod.swift */,
+				2BD5094520FA3F8F004804B5 /* CoolBlueAPI.swift */,
+				2BD5094D20FA42A2004804B5 /* CBRouter.swift */,
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		2BD5093020FA3728004804B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BD5093520FA3925004804B5 /* Product.swift */,
+				2BD5093D20FA3DC1004804B5 /* ReviewInformation.swift */,
+				2BD5093B20FA3DB6004804B5 /* Review.swift */,
+				2BD5093920FA3DAA004804B5 /* ReviewSummary.swift */,
+				2BD5093720FA3D9D004804B5 /* Specification.swift */,
+				2BD5093F20FA3DCE004804B5 /* Availability.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2BD5093120FA3739004804B5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2BD5093220FA37C3004804B5 /* Themes */,
+				2BD508E920FA3318004804B5 /* Assets.xcassets */,
+				2BD508EB20FA3318004804B5 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2BD5093220FA37C3004804B5 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				2BD5093320FA37E4004804B5 /* PrimaryTheme.swift */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,12 +383,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BD5092B20FA36FF004804B5 /* RCBProductDetails.swift in Sources */,
+				2BD5093E20FA3DC1004804B5 /* ReviewInformation.swift in Sources */,
 				2BD508E320FA3317004804B5 /* AppDelegate.swift in Sources */,
+				2BD5094C20FA40A5004804B5 /* CBError.swift in Sources */,
+				2BD5092E20FA36FF004804B5 /* ICBProductDetails.swift in Sources */,
 				2BD5091F20FA3653004804B5 /* PCBSearch.swift in Sources */,
+				2BD5093420FA37E4004804B5 /* PrimaryTheme.swift in Sources */,
+				2BD5093C20FA3DB6004804B5 /* Review.swift in Sources */,
+				2BD5094920FA3F90004804B5 /* CoolBlueAPI.swift in Sources */,
+				2BD5093620FA3925004804B5 /* Product.swift in Sources */,
+				2BD5094020FA3DCE004804B5 /* Availability.swift in Sources */,
+				2BD5092C20FA36FF004804B5 /* ECBProductDetails.swift in Sources */,
 				2BD5091B20FA3653004804B5 /* CCBSearch.swift in Sources */,
 				2BD5091A20FA3653004804B5 /* VCBSearch.swift in Sources */,
+				2BD5093820FA3D9D004804B5 /* Specification.swift in Sources */,
+				2BD5093A20FA3DAA004804B5 /* ReviewSummary.swift in Sources */,
+				2BD5092D20FA36FF004804B5 /* PCBProductDetails.swift in Sources */,
+				2BD5092820FA36FF004804B5 /* VCBProductDetails.swift in Sources */,
+				2BD5094E20FA42A2004804B5 /* CBRouter.swift in Sources */,
+				2BD5094820FA3F90004804B5 /* CBEndpoint.swift in Sources */,
 				2BD5091D20FA3653004804B5 /* RCBSearch.swift in Sources */,
 				2BD5091E20FA3653004804B5 /* ECBSearch.swift in Sources */,
+				2BD5092A20FA36FF004804B5 /* VCBProductDetailsUI.swift in Sources */,
+				2BD5094A20FA3F90004804B5 /* HTTPMethod.swift in Sources */,
+				2BD5092920FA36FF004804B5 /* CCBProductDetails.swift in Sources */,
 				2BD5092020FA3653004804B5 /* ICBSearch.swift in Sources */,
 				2BD5091C20FA3653004804B5 /* VCBSearchUI.swift in Sources */,
 			);
