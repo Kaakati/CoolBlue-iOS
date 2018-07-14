@@ -24,12 +24,17 @@ struct Product : Codable {
     var specificationSummary : [Specification]?
     var nextDayDelivery : Bool?
     var recommendedAccessories : [Int]?
+    
+    // Aditional for Search Model
+    var image : String?
+    var promoText : String?
+    var promoIcon : PromoIcon?
 }
 
 extension Product {
     
     /// Query for Products with Paging
-    static func search(query: String, page: Int, completion: @escaping APIResponse<Product>) {
+    static func search(query: String, page: Int, completion: @escaping APIResponse<[Product]>) {
         CBRouter.product.search(query: query, page: page).request(completion: completion)
     }
     
