@@ -26,11 +26,11 @@ class CoolBlueAPI {
 	}
 
 	func startTaskWith<T: Decodable>(path: String, parameters: Data?, headers: [String: String], method: HTTPMethod, completion: @escaping APIResponse<T>) {
-		guard var baseUrl = URL(string: baseUrl) else {
+		guard var baseUrl = URL(string: baseUrl.appendingPathComponent(path)) else {
 			// the baseUrl string is not valid
 			return
 		}
-		baseUrl.appendPathComponent(path)
+//        baseUrl.appendPathComponent(path.urlEncoded)
 
 		var request = URLRequest(url: baseUrl)
 		request.httpMethod = method.name

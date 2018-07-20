@@ -5,55 +5,64 @@
 //  Created Mohamad Kaakati on 14/07/2018.
 //  Copyright © 2018 Kaakati. All rights reserved.
 //
-//  Template generated for HungerStation Viper Modules
-//
 
 import UIKit
 import SwifterSwift
 
 class ICBSearch: ICBSearchProtocol {
     
-    var queryString : String = ""
-    var paging : Int = 1
+    private var presenter : PCBSearchProtocol!
+    private var queryString : String = ""
+    private var paging : Int = 1
     
     func fetch(productsWithQuery query: String, for presenter: PCBSearchProtocol) {
-        //
-        queryString = query
+        self.presenter = presenter
+        queryString = query // Reset Query by Presenter.
         paging = 1
-        
-        Product.search(query: query, page: paging) { (results) in
+        fetchProductsResponse()
+    }
+    
+    /// Next Page Result by User Request
+    func update(productsFor presenter: PCBSearchProtocol) {
+        paging += 1
+        fetchProductsResponse()
+    }
+    
+    /// Call API for Results
+    fileprivate func fetchProductsResponse() {
+        let isNextPage = paging != 1
+        Product.search(query: queryString, page: paging) { (results) in
             switch results {
-            case .success(let products):
-                presenter.interactor(self, didFetch: [products])
+            case .success(let searchNode):
+                let products = searchNode.products.map({ return self.map(model: $0) })
+                if isNextPage {
+                    self.presenter.interactor(self, didUpdate: products)
+                } else {
+                    self.presenter.interactor(self, didFetch: products)
+                }
             case .failure(let error):
-                presenter.interactor(self, didFailToFetch: error)
+                if isNextPage {
+                    self.presenter.interactor(self, didFailToUpdate: error)
+                } else {
+                    self.presenter.interactor(self, didFailToFetch: error)
+                }
             }
         }
     }
     
-    func update(productsFor presenter: PCBSearchProtocol) {
-        //
-        
-        
-    }
-    
-    private func mapModelToEntity(model: Product) -> ECBSearch {
-        
+    /// Map Response Model to Entity
+    fileprivate func map(model: Product) -> ECBSearch {
         var ecbSearch = ECBSearch()
         ecbSearch.id = model.id ?? 0
         ecbSearch.name = model.name ?? ""
         ecbSearch.image = model.image ?? ""
         ecbSearch.price = model.salesPriceIncVat?.string ?? 0.string
-        ecbSearch.nextDayDelivery = model.nextDayDelivery?.string ?? ""
+        ecbSearch.nextDayDelivery = model.availabilityState?.asString ?? ""
         ecbSearch.rating = model.reviewInformation?.reviewSummary?.count ?? 0
         ecbSearch.promoText = model.promoText ?? ""
-        ecbSearch.promoIcon = UIImage(named: "\(model.promoIcon?.text)")
+        ecbSearch.promoIcon = UIImage(named: model.promoIcon?.text ?? "")
+        ecbSearch.usps = model.usps ?? []
+        return ecbSearch
     }
-
+    
 }
-
-
-
-
-
-

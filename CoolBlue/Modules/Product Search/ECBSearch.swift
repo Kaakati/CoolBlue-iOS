@@ -5,8 +5,6 @@
 //  Created Mohamad Kaakati on 14/07/2018.
 //  Copyright © 2018 Kaakati. All rights reserved.
 //
-//  Template generated for HungerStation Viper Modules
-//
 
 import UIKit
 
@@ -22,4 +20,5 @@ struct ECBSearch {
     var nextDayDelivery : String = "Next Day Delivery"
     var image : String = ""
     var promoIcon : UIImage?
+    
 }

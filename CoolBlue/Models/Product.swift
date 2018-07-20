@@ -17,8 +17,8 @@ struct Product : Codable {
     var pros : [String]?
     var cons : [String]?
     var availabilityState : Availability?
-    var salesPriceIncVat : Int?
-    var salesPriceExVat : Int?
+    var salesPriceIncVat : Double?
+    var salesPriceExVat : Double?
     var productImages : [String]?
     var deliveredWith : [String]?
     var specificationSummary : [Specification]?
@@ -29,12 +29,33 @@ struct Product : Codable {
     var image : String?
     var promoText : String?
     var promoIcon : PromoIcon?
+    
+    enum CodingKeys : String, CodingKey {
+        case id = "productId"
+        case name = "productName"
+        case text = "productText"
+        case usps = "USPs"
+        case cons
+        case pros
+        case availabilityState
+        case salesPriceIncVat
+        case salesPriceExVat
+        case productImages
+        case deliveredWith
+        case specificationSummary
+        case nextDayDelivery
+        case recommendedAccessories
+        
+        case image = "productImage"
+        case promoText = "coolbluesChoiceInformationTitle"
+        case promoIcon = ""
+    }
 }
 
 extension Product {
     
     /// Query for Products with Paging
-    static func search(query: String, page: Int, completion: @escaping APIResponse<[Product]>) {
+    static func search(query: String, page: Int, completion: @escaping APIResponse<SearchNode>) {
         CBRouter.product.search(query: query, page: page).request(completion: completion)
     }
     

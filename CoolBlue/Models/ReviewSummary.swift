@@ -11,4 +11,9 @@ import Foundation
 struct ReviewSummary : Codable  {
     var average : Int?
     var count : Int?
+    
+    enum CodingKeys : String, CodingKey {
+        case average = "reviewAverage"
+        case count = "reviewCount"
+    }
 }

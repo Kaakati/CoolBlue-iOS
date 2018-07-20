@@ -10,19 +10,28 @@ import Foundation
 
 // Ask for availabilityState cases
 enum Availability : Int, Codable  {
-    case comingSoon
-    case inStock
-    case outOfStock
-    
+    case availableSoon = 1
+    case onStock = 2
+    case temporarlyOutOfStock = 3
+    case empty = 4
+    case permenantlyOutOfStock = 5
+    case preOrder = 6
+
     /// Returns Availability State as a string value
     var asString : String {
         switch self {
-        case .comingSoon:
-            return "Coming Soon"
-        case .inStock:
-            return "In Stock"
-        case .outOfStock:
-            return "Out of Stock"
+        case .availableSoon:
+            return "Available Soon"
+        case .onStock:
+            return "On Stock"
+        case .temporarlyOutOfStock:
+            return "Temporarly Out of Stock"
+        case .empty:
+            return "Empty"
+        case .permenantlyOutOfStock:
+            return "Permenantly Out of Stock"
+        case .preOrder:
+            return "Pre-Order"
         }
     }
 }

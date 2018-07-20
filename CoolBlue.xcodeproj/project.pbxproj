@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B7F009621022AA900FFE0E1 /* CBSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7F009521022AA900FFE0E1 /* CBSearchTableViewCell.swift */; };
+		2B7F009821022DDA00FFE0E1 /* CBSearchCellUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7F009721022DDA00FFE0E1 /* CBSearchCellUI.swift */; };
+		2BA21AD1210240EB00686371 /* DetailsNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA21AD0210240EB00686371 /* DetailsNode.swift */; };
+		2BA21AD3210240FC00686371 /* SearchNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA21AD2210240FC00686371 /* SearchNode.swift */; };
 		2BD508E320FA3317004804B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD508E220FA3317004804B5 /* AppDelegate.swift */; };
 		2BD508EA20FA3318004804B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD508E920FA3318004804B5 /* Assets.xcassets */; };
 		2BD508ED20FA3318004804B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD508EB20FA3318004804B5 /* LaunchScreen.storyboard */; };
@@ -63,6 +67,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B7F009521022AA900FFE0E1 /* CBSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBSearchTableViewCell.swift; sourceTree = "<group>"; };
+		2B7F009721022DDA00FFE0E1 /* CBSearchCellUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBSearchCellUI.swift; sourceTree = "<group>"; };
+		2BA21AD0210240EB00686371 /* DetailsNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsNode.swift; sourceTree = "<group>"; };
+		2BA21AD2210240FC00686371 /* SearchNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNode.swift; sourceTree = "<group>"; };
 		2BD508DF20FA3317004804B5 /* CoolBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD508E220FA3317004804B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BD508E920FA3318004804B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,6 +149,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BA21ACF21023E4900686371 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				2B7F009521022AA900FFE0E1 /* CBSearchTableViewCell.swift */,
+				2B7F009721022DDA00FFE0E1 /* CBSearchCellUI.swift */,
+			);
+			name = "UI Components";
+			sourceTree = "<group>";
+		};
 		2BD508D620FA3317004804B5 = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +264,8 @@
 		2BD5093020FA3728004804B5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2BA21AD0210240EB00686371 /* DetailsNode.swift */,
+				2BA21AD2210240FC00686371 /* SearchNode.swift */,
 				2BD5093520FA3925004804B5 /* Product.swift */,
 				2BD5093D20FA3DC1004804B5 /* ReviewInformation.swift */,
 				2BD5093B20FA3DB6004804B5 /* Review.swift */,
@@ -279,6 +298,7 @@
 		2BD5094F20FA4744004804B5 /* View Components */ = {
 			isa = PBXGroup;
 			children = (
+				2BA21ACF21023E4900686371 /* UI Components */,
 				2BD5091520FA3653004804B5 /* VCBSearchUI.swift */,
 			);
 			path = "View Components";
@@ -550,18 +570,22 @@
 				2BD5093620FA3925004804B5 /* Product.swift in Sources */,
 				2BD5095520FA5A6D004804B5 /* BaseViewProtocol.swift in Sources */,
 				2BD5094020FA3DCE004804B5 /* Availability.swift in Sources */,
+				2BA21AD3210240FC00686371 /* SearchNode.swift in Sources */,
 				2BD5092C20FA36FF004804B5 /* ECBProductDetails.swift in Sources */,
 				2BD5091B20FA3653004804B5 /* CCBSearch.swift in Sources */,
 				2BD5091A20FA3653004804B5 /* VCBSearch.swift in Sources */,
+				2B7F009821022DDA00FFE0E1 /* CBSearchCellUI.swift in Sources */,
 				2BD5093820FA3D9D004804B5 /* Specification.swift in Sources */,
 				2BD5093A20FA3DAA004804B5 /* ReviewSummary.swift in Sources */,
 				2BD5095220FA4D7D004804B5 /* PromoIcon.swift in Sources */,
+				2BA21AD1210240EB00686371 /* DetailsNode.swift in Sources */,
 				2BD5092D20FA36FF004804B5 /* PCBProductDetails.swift in Sources */,
 				2BD5092820FA36FF004804B5 /* VCBProductDetails.swift in Sources */,
 				2BD5094E20FA42A2004804B5 /* CBRouter.swift in Sources */,
 				2BD5094820FA3F90004804B5 /* CBEndpoint.swift in Sources */,
 				2BD5091D20FA3653004804B5 /* RCBSearch.swift in Sources */,
 				2BD5091E20FA3653004804B5 /* ECBSearch.swift in Sources */,
+				2B7F009621022AA900FFE0E1 /* CBSearchTableViewCell.swift in Sources */,
 				2BD5092A20FA36FF004804B5 /* VCBProductDetailsUI.swift in Sources */,
 				2BD5094A20FA3F90004804B5 /* HTTPMethod.swift in Sources */,
 				2BD5092920FA36FF004804B5 /* CCBProductDetails.swift in Sources */,
