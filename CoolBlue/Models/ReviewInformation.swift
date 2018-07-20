@@ -11,4 +11,9 @@ import Foundation
 struct ReviewInformation : Codable  {
     var reviews : [Review]?
     var reviewSummary : ReviewSummary?
+    
+    enum CodingKeys : String, CodingKey {
+        case reviews
+        case reviewSummary
+    }
 }

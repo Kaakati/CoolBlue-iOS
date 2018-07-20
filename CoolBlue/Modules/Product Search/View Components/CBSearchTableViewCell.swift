@@ -33,8 +33,10 @@ class CBSearchTableViewCell : UITableViewCell {
     
     private func setupUI() {
         self.addSubview(cellUI)
-        
-        cellUI.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        self.selectionStyle = .none
+        self.backgroundColor = UIColor.appTheme.colors.LightGray
+        cellUI.setBottomBorder()
+        cellUI.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 5, leftConstant: 10, bottomConstant: 5, rightConstant: 10, widthConstant: 0, heightConstant: 0)
     }
     
 }

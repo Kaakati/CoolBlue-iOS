@@ -40,6 +40,7 @@ class VCBProductDetailsUI: UIView {
 
     fileprivate func setupUIElements() {
         // arrange subviews
+        self.backgroundColor = UIColor.white
     }
 
     fileprivate func setupConstraints() {

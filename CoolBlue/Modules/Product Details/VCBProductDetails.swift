@@ -24,7 +24,16 @@ class VCBProductDetails: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
         presenter = PCBProductDetails(view: self)
+        self.title = "Product Details"
   }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+//        self.navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor.appTheme.colors.BlueLight
+
+    }
 
 }
 

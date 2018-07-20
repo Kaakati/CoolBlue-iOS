@@ -23,9 +23,23 @@ class VCBSearch: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Search Products"
+        self.title = ""
         presenter = PCBSearch(view: self)
         presenter.fetch(productsWithQuery: "", for: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 struct ReviewSummary : Codable  {
-    var average : Int?
+    var average : Float?
     var count : Int?
     
     enum CodingKeys : String, CodingKey {

@@ -18,10 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Set Key Window and Screen
-        window = UIWindow()
-        self.window?.backgroundColor = UIColor.white
-        window?.rootViewController = UINavigationController(rootViewController: VCBSearch())
-        window?.makeKeyAndVisible()
+        setupHomeScreen(asView: VCBSearch())
         
         return true
     }
@@ -48,6 +45,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+}
 
+
+// CoolBlue Functions
+extension AppDelegate {
+    
+    fileprivate func setupHomeScreen(asView view: UIViewController) {
+        window = UIWindow()
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor.appTheme.colors.BlueLight
+        UINavigationBar.appearance().barStyle = .blackOpaque
+        self.window?.backgroundColor = UIColor.white
+        window?.rootViewController = UINavigationController(rootViewController: view)
+        view.navigationController?.makeTransparent(withTint: .clear)
+        window?.makeKeyAndVisible()
+    }
+    
 }
 

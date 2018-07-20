@@ -26,10 +26,14 @@ class VCBSearchUI: UIView {
     var delegate : VCBSearchUIDelegate?
     var dataSource : VCBSearchUIDataSource?
     
+    lazy var tableHeader = CBSearchFieldUI()
+    
     lazy var tableView : UITableView = {
         let tbl = UITableView()
         tbl.delegate = self
         tbl.dataSource = self
+        tbl.separatorColor = .clear
+        tbl.backgroundColor = UIColor.appTheme.colors.LightGray
         tbl.register(CBSearchTableViewCell.self, forCellReuseIdentifier: cellID)
         tbl.translatesAutoresizingMaskIntoConstraints = false
         return tbl
@@ -48,14 +52,16 @@ class VCBSearchUI: UIView {
         super.didMoveToWindow()
         setupConstraints()
     }
-
+    
     fileprivate func setupUIElements() {
         // arrange subviews
         self.addSubview(tableView)
+        tableView.tableHeaderView = tableHeader
     }
 
     fileprivate func setupConstraints() {
         // add constraints to subviews
+        tableView.tableHeaderView?.height = 50
         tableView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
     
@@ -84,6 +90,7 @@ extension VCBSearchUI: UITableViewDataSource {
         cell.product = self.products?[indexPath.row]
         return cell
     }
+    
 }
 
 extension VCBSearchUI: UITableViewDelegate {
@@ -96,4 +103,3 @@ extension VCBSearchUI: UITableViewDelegate {
         delegate?.view(self, didSelect: products![indexPath.row])
     }
 }
-

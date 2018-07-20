@@ -58,10 +58,11 @@ class ICBSearch: ICBSearchProtocol {
         ecbSearch.image = model.image ?? ""
         ecbSearch.price = model.salesPriceIncVat?.string ?? 0.string
         ecbSearch.nextDayDelivery = model.availabilityState?.asString ?? ""
-        ecbSearch.rating = model.reviewInformation?.reviewSummary?.count ?? 0
+        ecbSearch.totalRating = String(describing: model.reviewInformation?.reviewSummary?.count ?? 0) + " Reviews"
         ecbSearch.promoText = model.promoText ?? ""
         ecbSearch.promoIcon = UIImage(named: model.promoIcon?.text ?? "")
         ecbSearch.usps = model.usps ?? []
+        ecbSearch.rating = model.reviewInformation?.reviewSummary?.average ?? 0.0
         return ecbSearch
     }
     

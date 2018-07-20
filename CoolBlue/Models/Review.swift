@@ -16,6 +16,6 @@ struct Review : Codable  {
     var creatorName : String?
     var description : String?
     var title : String?
-    var rating : Int?
+    var rating : Float?
     var languageCode : String?
 }

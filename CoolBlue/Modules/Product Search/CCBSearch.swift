@@ -10,7 +10,7 @@ import UIKit
 
 //MARK: Wireframe -
 protocol RCBSearchProtocol {
-    
+    // Perform Route to Product Details
     func showProductDetails(with id: Int, from viewController: UIViewController)
     
 }

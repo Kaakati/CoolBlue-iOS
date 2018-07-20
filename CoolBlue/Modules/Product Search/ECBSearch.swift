@@ -13,8 +13,8 @@ struct ECBSearch {
     var id : Int = 0
     var name : String = "Product Name"
     var promoText : String = ""
-    var rating : Int = 0
-    var totalRating : String = "0 Reviews"
+    var rating : Float = 0.0
+    var totalRating : String = "0"
     var usps : [String] = []
     var price : String = ""
     var nextDayDelivery : String = "Next Day Delivery"

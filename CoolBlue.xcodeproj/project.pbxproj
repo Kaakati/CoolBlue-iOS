@@ -11,6 +11,7 @@
 		2B7F009821022DDA00FFE0E1 /* CBSearchCellUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7F009721022DDA00FFE0E1 /* CBSearchCellUI.swift */; };
 		2BA21AD1210240EB00686371 /* DetailsNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA21AD0210240EB00686371 /* DetailsNode.swift */; };
 		2BA21AD3210240FC00686371 /* SearchNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA21AD2210240FC00686371 /* SearchNode.swift */; };
+		2BB4B26221028C3700147B53 /* CBSearchFieldUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4B26121028C3700147B53 /* CBSearchFieldUI.swift */; };
 		2BD508E320FA3317004804B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD508E220FA3317004804B5 /* AppDelegate.swift */; };
 		2BD508EA20FA3318004804B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD508E920FA3318004804B5 /* Assets.xcassets */; };
 		2BD508ED20FA3318004804B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD508EB20FA3318004804B5 /* LaunchScreen.storyboard */; };
@@ -71,6 +72,7 @@
 		2B7F009721022DDA00FFE0E1 /* CBSearchCellUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBSearchCellUI.swift; sourceTree = "<group>"; };
 		2BA21AD0210240EB00686371 /* DetailsNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsNode.swift; sourceTree = "<group>"; };
 		2BA21AD2210240FC00686371 /* SearchNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNode.swift; sourceTree = "<group>"; };
+		2BB4B26121028C3700147B53 /* CBSearchFieldUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBSearchFieldUI.swift; sourceTree = "<group>"; };
 		2BD508DF20FA3317004804B5 /* CoolBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD508E220FA3317004804B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BD508E920FA3318004804B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,8 +154,9 @@
 		2BA21ACF21023E4900686371 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
-				2B7F009521022AA900FFE0E1 /* CBSearchTableViewCell.swift */,
 				2B7F009721022DDA00FFE0E1 /* CBSearchCellUI.swift */,
+				2B7F009521022AA900FFE0E1 /* CBSearchTableViewCell.swift */,
+				2BB4B26121028C3700147B53 /* CBSearchFieldUI.swift */,
 			);
 			name = "UI Components";
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				2BD508DC20FA3317004804B5 /* Frameworks */,
 				2BD508DD20FA3317004804B5 /* Resources */,
 				4356991B7E5DEACFA9DAF942 /* [CP] Embed Pods Frameworks */,
+				D57D5F0A8C73D7CACDCE4307 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -373,6 +377,8 @@
 				2BD508EF20FA3318004804B5 /* Sources */,
 				2BD508F020FA3318004804B5 /* Frameworks */,
 				2BD508F120FA3318004804B5 /* Resources */,
+				6D64D4ABFFAE5157211A0B71 /* [CP] Embed Pods Frameworks */,
+				85EC4C4B9AF1359F12EDD700 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -392,6 +398,8 @@
 				2BD508FA20FA3318004804B5 /* Sources */,
 				2BD508FB20FA3318004804B5 /* Frameworks */,
 				2BD508FC20FA3318004804B5 /* Resources */,
+				6D3D94B4BA94324505F1C00A /* [CP] Embed Pods Frameworks */,
+				3E355A99FA5E4858B0240AF4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -473,6 +481,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3E355A99FA5E4858B0240AF4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlueUITests/Pods-CoolBlueUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4356991B7E5DEACFA9DAF942 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,6 +520,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlue/Pods-CoolBlue-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6D3D94B4BA94324505F1C00A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlueUITests/Pods-CoolBlueUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D64D4ABFFAE5157211A0B71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlueTests/Pods-CoolBlueTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7F49F4C2854D5FC8C9DD353F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -515,6 +568,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		85EC4C4B9AF1359F12EDD700 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlueTests/Pods-CoolBlueTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AACD68B5A9176351A23EE48C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -531,6 +599,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D57D5F0A8C73D7CACDCE4307 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlue/Pods-CoolBlue-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F0BAE247471788E33AF76AEE /* [CP] Check Pods Manifest.lock */ = {
@@ -558,6 +641,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BB4B26221028C3700147B53 /* CBSearchFieldUI.swift in Sources */,
 				2BD5092B20FA36FF004804B5 /* RCBProductDetails.swift in Sources */,
 				2BD5093E20FA3DC1004804B5 /* ReviewInformation.swift in Sources */,
 				2BD508E320FA3317004804B5 /* AppDelegate.swift in Sources */,

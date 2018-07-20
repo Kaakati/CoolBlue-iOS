@@ -35,6 +35,7 @@ struct Product : Codable {
         case name = "productName"
         case text = "productText"
         case usps = "USPs"
+        case reviewInformation = "reviewInformation"
         case cons
         case pros
         case availabilityState
