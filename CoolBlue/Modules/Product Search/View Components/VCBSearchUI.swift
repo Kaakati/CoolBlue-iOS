@@ -62,7 +62,7 @@ class VCBSearchUI: UIView {
 
     fileprivate func setupConstraints() {
         // add constraints to subviews
-        tableView.tableHeaderView?.height = 50
+        tableView.tableHeaderView?.height = 60
         tableView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
     

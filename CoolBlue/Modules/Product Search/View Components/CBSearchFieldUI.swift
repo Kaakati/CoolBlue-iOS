@@ -35,6 +35,6 @@ class CBSearchFieldUI : UIView {
         self.backgroundColor = UIColor.appTheme.colors.BlueLight
         self.addSubview(searchField)
         searchField.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        searchField.anchor(top: nil, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 10, rightConstant: 10, widthConstant: 0, heightConstant: 0)
+        searchField.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 10, rightConstant: 10, widthConstant: 0, heightConstant: 0)
     }
 }
