@@ -56,6 +56,7 @@ class VCBSearchUI: UIView {
     fileprivate func setupUIElements() {
         // arrange subviews
         self.addSubview(tableView)
+        tableView.backgroundColor = UIColor.appTheme.colors.BlueLight
         tableView.tableHeaderView = tableHeader
     }
 
