@@ -5,8 +5,6 @@
 //  Created Mohamad Kaakati on 14/07/2018.
 //  Copyright © 2018 Kaakati. All rights reserved.
 //
-//  Template generated for HungerStation Viper Modules
-//
 
 import UIKit
 
@@ -14,7 +12,13 @@ class VCBProductDetails: UIViewController {
 
 	fileprivate let ui = VCBProductDetailsUI()
 	fileprivate var presenter: PCBProductDetailsProtocol!
-
+    
+    var product : ECBProductDetails? {
+        didSet {
+            
+        }
+    }
+    
 	override func loadView() {
 		ui.delegate = self
 		ui.dataSource = self
@@ -25,19 +29,29 @@ class VCBProductDetails: UIViewController {
         super.viewDidLoad()
         presenter = PCBProductDetails(view: self)
         self.title = "Product Details"
+        presenter.fetch(productWithId: 785359, for: self)
   }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-//        self.navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         self.navigationController?.navigationBar.tintColor = UIColor.appTheme.colors.BlueLight
-
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor.appTheme.colors.LightGray
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor.appTheme.colors.BlueLight
     }
 
 }
 
 extension VCBProductDetails: VCBProductDetailsProtocol {
+    
+    func shouldSet(product: ECBProductDetails) {
+        self.product = product
+    }
+    
 
 }
 

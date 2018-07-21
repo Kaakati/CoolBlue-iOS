@@ -43,7 +43,7 @@ struct Product : Codable {
         case salesPriceExVat
         case productImages
         case deliveredWith
-        case specificationSummary
+        case specificationSummary = "specificationSummary"
         case nextDayDelivery
         case recommendedAccessories
         
@@ -61,8 +61,8 @@ extension Product {
     }
     
     /// Fetch Product Details from Instance
-    func details(completion: @escaping APIResponse<Product>) {
-        guard let id = self.id else { return }
+    static func details(forId id: Int, completion: @escaping APIResponse<DetailsNode>) {
+//        guard let id = self.id else { return }
         CBRouter.product.details(id: id).request(completion: completion)
     }
     

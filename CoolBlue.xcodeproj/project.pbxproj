@@ -12,6 +12,7 @@
 		2BA21AD1210240EB00686371 /* DetailsNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA21AD0210240EB00686371 /* DetailsNode.swift */; };
 		2BA21AD3210240FC00686371 /* SearchNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA21AD2210240FC00686371 /* SearchNode.swift */; };
 		2BB4B26221028C3700147B53 /* CBSearchFieldUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4B26121028C3700147B53 /* CBSearchFieldUI.swift */; };
+		2BB4B2652103466000147B53 /* VCBProductImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4B2642103466000147B53 /* VCBProductImagesCell.swift */; };
 		2BD508E320FA3317004804B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD508E220FA3317004804B5 /* AppDelegate.swift */; };
 		2BD508EA20FA3318004804B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD508E920FA3318004804B5 /* Assets.xcassets */; };
 		2BD508ED20FA3318004804B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD508EB20FA3318004804B5 /* LaunchScreen.storyboard */; };
@@ -73,6 +74,7 @@
 		2BA21AD0210240EB00686371 /* DetailsNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsNode.swift; sourceTree = "<group>"; };
 		2BA21AD2210240FC00686371 /* SearchNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNode.swift; sourceTree = "<group>"; };
 		2BB4B26121028C3700147B53 /* CBSearchFieldUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBSearchFieldUI.swift; sourceTree = "<group>"; };
+		2BB4B2642103466000147B53 /* VCBProductImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCBProductImagesCell.swift; sourceTree = "<group>"; };
 		2BD508DF20FA3317004804B5 /* CoolBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD508E220FA3317004804B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BD508E920FA3318004804B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -159,6 +161,14 @@
 				2BB4B26121028C3700147B53 /* CBSearchFieldUI.swift */,
 			);
 			name = "UI Components";
+			sourceTree = "<group>";
+		};
+		2BB4B2632103462D00147B53 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				2BB4B2642103466000147B53 /* VCBProductImagesCell.swift */,
+			);
+			path = "UI Components";
 			sourceTree = "<group>";
 		};
 		2BD508D620FA3317004804B5 = {
@@ -310,6 +320,7 @@
 		2BD5095020FA4755004804B5 /* View Components */ = {
 			isa = PBXGroup;
 			children = (
+				2BB4B2632103462D00147B53 /* UI Components */,
 				2BD5092320FA36FF004804B5 /* VCBProductDetailsUI.swift */,
 			);
 			path = "View Components";
@@ -650,6 +661,7 @@
 				2BD5091F20FA3653004804B5 /* PCBSearch.swift in Sources */,
 				2BD5093420FA37E4004804B5 /* PrimaryTheme.swift in Sources */,
 				2BD5093C20FA3DB6004804B5 /* Review.swift in Sources */,
+				2BB4B2652103466000147B53 /* VCBProductImagesCell.swift in Sources */,
 				2BD5094920FA3F90004804B5 /* CoolBlueAPI.swift in Sources */,
 				2BD5093620FA3925004804B5 /* Product.swift in Sources */,
 				2BD5095520FA5A6D004804B5 /* BaseViewProtocol.swift in Sources */,

@@ -5,11 +5,19 @@
 //  Created Mohamad Kaakati on 14/07/2018.
 //  Copyright © 2018 Kaakati. All rights reserved.
 //
-//  Template generated for HungerStation Viper Modules
-//
 
 import UIKit
 
 struct ECBProductDetails {
-
+    
+    var id : Int = 0
+    var name : String = "Product Name"
+    var promoText : String = ""
+    var rating : Float = 0.0
+    var totalRating : String = "0"
+    var usps : [String] = []
+    var price : String = ""
+    var nextDayDelivery : String = "Next Day Delivery"
+    var images : [String]?
+    
 }

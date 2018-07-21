@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct DetailsNode : Codable {
+    
+    var product : Product
+    
+}

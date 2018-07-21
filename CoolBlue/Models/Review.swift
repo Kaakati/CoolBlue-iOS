@@ -18,4 +18,17 @@ struct Review : Codable  {
     var title : String?
     var rating : Float?
     var languageCode : String?
+    
+    enum CodingKeys : String, CodingKey {
+        case id = "reviewId"
+        case pros
+        case cons
+        case creationDate
+        case creatorName
+        case description
+        case title
+        case rating
+        case languageCode
+    }
+    
 }

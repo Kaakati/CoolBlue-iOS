@@ -5,8 +5,6 @@
 //  Created Mohamad Kaakati on 14/07/2018.
 //  Copyright © 2018 Kaakati. All rights reserved.
 //
-//  Template generated for HungerStation Viper Modules
-//
 
 import UIKit
 
@@ -24,5 +22,20 @@ class PCBProductDetails {
 }
 
 extension PCBProductDetails: PCBProductDetailsProtocol {
+    
+    func fetch(productWithId id: Int, for view: VCBProductDetailsProtocol) {
+        //
+        interactor.fetch(productsWithId: id, for: self)
+    }
+    
+    func interactor(_ interactor: ICBProductDetailsProtocol, didFetch product: ECBProductDetails) {
+        //
+        view?.shouldSet(product: product)
+    }
+    
+    func interactor(_ interactor: ICBProductDetailsProtocol, didFailToFetch error: CBError) {
+        //
+    }
+    
 
 }
