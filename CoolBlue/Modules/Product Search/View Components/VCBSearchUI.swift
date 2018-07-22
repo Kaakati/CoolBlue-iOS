@@ -12,6 +12,7 @@ import SwifterSwift
 protocol VCBSearchUIDelegate {
     func view(_ view: VCBSearchUI, didSelect product: ECBSearch)
     func view(_ view: VCBSearchUI, didSearch query: String)
+    func didReachLastCell(_ view: VCBSearchUI)
 }
 
 protocol VCBSearchUIDataSource {
@@ -94,6 +95,13 @@ extension VCBSearchUI: UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastElement = (products?.count ?? 0) - 1
+        if indexPath.row == lastElement {
+            // handle your logic here to get more items, add it to dataSource and reload tableview
+            delegate?.didReachLastCell(self)
+        }
+    }
 }
 
 extension VCBSearchUI: UITableViewDelegate {
@@ -111,6 +119,4 @@ extension VCBSearchUI: CBSearchFieldUIDelegate {
     func searchField(_ view: CBSearchFieldUI, didChange value: String) {
         delegate?.view(self, didSearch: value)
     }
-    
-    
 }

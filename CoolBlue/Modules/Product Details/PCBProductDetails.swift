@@ -25,12 +25,14 @@ extension PCBProductDetails: PCBProductDetailsProtocol {
     
     func fetch(productWithId id: Int, for view: VCBProductDetailsProtocol) {
         // Fetch Entity with ID
+        view.startLoading()
         interactor.fetch(productsWithId: id, for: self)
     }
     
     func interactor(_ interactor: ICBProductDetailsProtocol, didFetch product: ECBProductDetails) {
         // Set Entity to View
         view?.shouldSet(product: product)
+        view?.stopLoading()
     }
     
     func interactor(_ interactor: ICBProductDetailsProtocol, didFailToFetch error: CBError) {

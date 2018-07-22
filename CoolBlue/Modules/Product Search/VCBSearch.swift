@@ -60,6 +60,10 @@ extension VCBSearch: VCBSearchProtocol {
 }
 
 extension VCBSearch: VCBSearchUIDelegate {
+    func didReachLastCell(_ view: VCBSearchUI) {
+        presenter.update(productsFor: self)
+    }
+    
     func view(_ view: VCBSearchUI, didSearch query: String) {
         presenter.fetch(productsWithQuery: query, for: self)
     }

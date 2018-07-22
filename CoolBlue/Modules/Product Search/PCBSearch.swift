@@ -41,8 +41,8 @@ extension PCBSearch: PCBSearchProtocol {
     
     func interactor(_ interactor: ICBSearchProtocol, didFetch products: [ECBSearch]) {
         view?.shouldEmptyProductsList()
-        view?.stopLoading()
         view?.shouldAppend(products: products)
+        view?.stopLoading()
     }
     
     func interactor(_ interactor: ICBSearchProtocol, didFailToFetch error: CBError) {
@@ -53,8 +53,8 @@ extension PCBSearch: PCBSearchProtocol {
     
     func interactor(_ interactor: ICBSearchProtocol, didUpdate products: [ECBSearch]) {
         //
-        view?.stopLoading()
         view?.shouldAppend(products: products)
+        view?.stopLoading()
     }
     
     func interactor(_ interactor: ICBSearchProtocol, didFailToUpdate error: CBError) {
