@@ -11,9 +11,12 @@ import XCTest
 
 class CoolBlueTests: XCTestCase {
     
+    var expectations : XCTestExpectation?
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.expectations = self.expectation(description: "Test was finished.")
     }
     
     override func tearDown() {
@@ -21,16 +24,42 @@ class CoolBlueTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSearchSuccess() {
+        let query = "Apple"
+        let paging = 1
+        Product.search(query: query, page: paging) { (result) in
+            switch result {
+            case .success:
+                XCTAssertTrue(true, "Success Fetch From API")
+                self.expectations?.fulfill()
+                break
+            case .failure:
+                break
+            }
+        }
+        wait(for: [self.expectations!], timeout: 5)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testProductDetails() {
+        Product.details(forId: 785359) { (result) in
+            switch result {
+            case .success:
+                XCTAssertTrue(true, "Success Fetch Details From API")
+                self.expectations?.fulfill()
+                break
+            case .failure:
+                break
+            }
         }
+        wait(for: [self.expectations!], timeout: 5)
     }
+    
+
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
     
 }
