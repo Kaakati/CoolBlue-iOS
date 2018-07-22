@@ -8,14 +8,21 @@
 
 import UIKit
 
+protocol CBSearchFieldUIDelegate {
+    func searchField(_ view: CBSearchFieldUI, didChange value: String)
+}
+
 class CBSearchFieldUI : UIView {
     
-    let searchField : UITextField = {
+    var delegate: CBSearchFieldUIDelegate?
+    
+    lazy var searchField : UITextField = {
         let tf = UITextField()
         tf.addPaddingLeft(15)
         tf.placeholder = "Search for products"
         tf.backgroundColor = UIColor.white
         tf.layer.borderWidth = 1
+        tf.delegate = self
         tf.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.thin)
         tf.layer.borderColor = UIColor.appTheme.colors.DarkGray?.cgColor
         tf.translatesAutoresizingMaskIntoConstraints = false
@@ -38,3 +45,12 @@ class CBSearchFieldUI : UIView {
         searchField.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 10, rightConstant: 10, widthConstant: 0, heightConstant: 0)
     }
 }
+
+extension CBSearchFieldUI: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        delegate?.searchField(self, didChange: textField.text ?? "")
+        self.endEditing(true)
+        return true
+    }
+}
+

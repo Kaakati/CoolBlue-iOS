@@ -17,7 +17,7 @@ typealias APIResponse<T: Decodable> = (Result<T>) -> Void
 
 class CoolBlueAPI {
 
-	var baseUrl: String {
+	var baseUrlString: String {
 		#if DEBUG
 			return "https://bdk0sta2n0.execute-api.eu-west-1.amazonaws.com/ios-assignment/"
 		#else
@@ -26,7 +26,10 @@ class CoolBlueAPI {
 	}
 
 	func startTaskWith<T: Decodable>(path: String, parameters: Data?, headers: [String: String], method: HTTPMethod, completion: @escaping APIResponse<T>) {
-		guard let baseUrl = URL(string: baseUrl.appendingPathComponent(path)) else {
+        var baseUrlString = self.baseUrlString
+        baseUrlString.append(path)
+        var queryString = baseUrlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
+		guard let baseUrl = URL(string: queryString) else {
 			// the baseUrl string is not valid
 			return
 		}

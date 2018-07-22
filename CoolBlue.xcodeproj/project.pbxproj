@@ -51,6 +51,7 @@
 		2BD5094E20FA42A2004804B5 /* CBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5094D20FA42A2004804B5 /* CBRouter.swift */; };
 		2BD5095220FA4D7D004804B5 /* PromoIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5095120FA4D7D004804B5 /* PromoIcon.swift */; };
 		2BD5095520FA5A6D004804B5 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5095420FA5A6D004804B5 /* BaseViewProtocol.swift */; };
+		2BE87BC921052EF700C75542 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BC821052EF700C75542 /* Extensions.swift */; };
 		AB684C46F95198541A34CB90 /* Pods_CoolBlue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAF65231328B108A51C98EB /* Pods_CoolBlue.framework */; };
 		CDBCE86E8282FBC2DBD8ED68 /* Pods_CoolBlueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C2583F93B7A9A4A9D33E63 /* Pods_CoolBlueTests.framework */; };
 		EE49EE1E66148312FE49DA17 /* Pods_CoolBlueUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF45C63FBF215C5D279C306 /* Pods_CoolBlueUITests.framework */; };
@@ -124,6 +125,7 @@
 		2BD5094D20FA42A2004804B5 /* CBRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBRouter.swift; sourceTree = "<group>"; };
 		2BD5095120FA4D7D004804B5 /* PromoIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoIcon.swift; sourceTree = "<group>"; };
 		2BD5095420FA5A6D004804B5 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
+		2BE87BC821052EF700C75542 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2FF45C63FBF215C5D279C306 /* Pods_CoolBlueUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolBlueUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6075538A91D07992D0DE9BE6 /* Pods-CoolBlueUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueUITests/Pods-CoolBlueUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6AAF65231328B108A51C98EB /* Pods_CoolBlue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolBlue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -325,6 +327,7 @@
 				2BD5093220FA37C3004804B5 /* Themes */,
 				2BD508E920FA3318004804B5 /* Assets.xcassets */,
 				2BD508EB20FA3318004804B5 /* LaunchScreen.storyboard */,
+				2BE87BC821052EF700C75542 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -707,6 +710,7 @@
 				2B7F009821022DDA00FFE0E1 /* CBSearchCellUI.swift in Sources */,
 				2BD5093820FA3D9D004804B5 /* Specification.swift in Sources */,
 				2BD5093A20FA3DAA004804B5 /* ReviewSummary.swift in Sources */,
+				2BE87BC921052EF700C75542 /* Extensions.swift in Sources */,
 				2BA21AD82104B1AE00686371 /* VCBAvailableAccessoriesCell.swift in Sources */,
 				2BD5095220FA4D7D004804B5 /* PromoIcon.swift in Sources */,
 				2BA21AD1210240EB00686371 /* DetailsNode.swift in Sources */,

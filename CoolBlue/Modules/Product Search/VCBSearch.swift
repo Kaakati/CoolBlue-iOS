@@ -60,6 +60,10 @@ extension VCBSearch: VCBSearchProtocol {
 }
 
 extension VCBSearch: VCBSearchUIDelegate {
+    func view(_ view: VCBSearchUI, didSearch query: String) {
+        presenter.fetch(productsWithQuery: query, for: self)
+    }
+    
     
     func view(_ view: VCBSearchUI, didSelect product: ECBSearch) {
         presenter.view(self, didSelectProduct: product)

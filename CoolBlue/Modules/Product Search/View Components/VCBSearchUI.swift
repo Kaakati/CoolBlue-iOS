@@ -11,6 +11,7 @@ import SwifterSwift
 
 protocol VCBSearchUIDelegate {
     func view(_ view: VCBSearchUI, didSelect product: ECBSearch)
+    func view(_ view: VCBSearchUI, didSearch query: String)
 }
 
 protocol VCBSearchUIDataSource {
@@ -58,6 +59,7 @@ class VCBSearchUI: UIView {
         self.addSubview(tableView)
         tableView.backgroundColor = UIColor.appTheme.colors.BlueLight
         tableView.tableHeaderView = tableHeader
+        tableHeader.delegate = self
     }
 
     fileprivate func setupConstraints() {
@@ -103,4 +105,12 @@ extension VCBSearchUI: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.view(self, didSelect: products![indexPath.row])
     }
+}
+
+extension VCBSearchUI: CBSearchFieldUIDelegate {
+    func searchField(_ view: CBSearchFieldUI, didChange value: String) {
+        delegate?.view(self, didSearch: value)
+    }
+    
+    
 }
