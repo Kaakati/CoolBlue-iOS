@@ -176,8 +176,8 @@
 		2BA21AD62104B16500686371 /* CollectionView Cells */ = {
 			isa = PBXGroup;
 			children = (
-				2BB4B26D2104541000147B53 /* VCBImagesCell.swift */,
 				2BA21AD42104B07300686371 /* VCBProductAccessoriesCell.swift */,
+				2BB4B26D2104541000147B53 /* VCBImagesCell.swift */,
 			);
 			path = "CollectionView Cells";
 			sourceTree = "<group>";

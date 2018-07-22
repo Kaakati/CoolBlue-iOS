@@ -21,13 +21,14 @@ struct ECBProductDetails {
     var images : [String]?
     var specs : [Specification]?
     var recommendedAccessories : [Int] = []
-    var accessories : [ECBProductDetails] = []
+    var accessories : [ECBProductDetailsAccessory] = []
 }
 
-//struct ECBProductDetails {
-//    
-//    var id : Int = 0
-//    var name : String = "Product Name"
-//    var images : [String]?
-//    
-//}
+
+struct ECBProductDetailsAccessory {
+    
+    var id : Int = 0
+    var name : String = "Product Name"
+    var image : String = ""
+    
+}

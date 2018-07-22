@@ -11,7 +11,7 @@ import Kingfisher
 
 class VCBAvailableAccessoriesCell: UITableViewCell, UICollectionViewDelegateFlowLayout {
     
-    var productImages : [String]? {
+    var productAccessories : [ECBProductDetailsAccessory]! {
         didSet {
             collectionView.reloadData()
         }
@@ -74,22 +74,16 @@ class VCBAvailableAccessoriesCell: UITableViewCell, UICollectionViewDelegateFlow
 // Collection View
 extension VCBAvailableAccessoriesCell : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9 //productImages!.count ?? 0
+        return productAccessories?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let item = collectionView.dequeueReusableCell(withReuseIdentifier: productImagesCellId, for: indexPath) as? VCBProductAccessoriesCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productImagesCellId, for: indexPath) as? VCBProductAccessoriesCell else {
             fatalError("Product Details CollectionView Cell Failed to Configure.")
         }
         
-        if productImages != nil {
-            let imageURL = URL(string: productImages![indexPath.row])
-            item.imageView.kf.setImage(with: imageURL)
-        } else {
-            let imageURL = URL(string: "https://placeimg.com/800/480/tech") //URL(string: productImages![indexPath.row])
-            item.imageView.kf.setImage(with: imageURL)
-        }
-        return item
+        cell.accessory = productAccessories[indexPath.row]
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

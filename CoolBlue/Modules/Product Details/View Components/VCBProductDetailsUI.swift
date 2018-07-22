@@ -106,6 +106,7 @@ extension VCBProductDetailsUI : UITableViewDelegate, UITableViewDataSource  {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: productAccessoriesCellID, for: indexPath) as? VCBAvailableAccessoriesCell else {
                 fatalError("Product Specs TableView Cell Failed to Configure.")
             }
+            cell.productAccessories = product?.accessories
             return cell
         default: // Default Cell Style
             let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellId, for: indexPath) as UITableViewCell

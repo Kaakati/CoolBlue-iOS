@@ -7,8 +7,17 @@
 //
 
 import UIKit
+import Kingfisher
 
 class VCBProductAccessoriesCell : UICollectionViewCell {
+    
+    var accessory : ECBProductDetailsAccessory! {
+        didSet {
+            let imgURL = URL(string: accessory.image)
+            imageView.kf.setImage(with: imgURL)
+            title.text = accessory.name
+        }
+    }
     
     let vStackView : UIStackView = {
         let sv = UIStackView()

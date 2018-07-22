@@ -10,59 +10,34 @@ import UIKit
 
 class ICBProductDetails: ICBProductDetailsProtocol {
     
-    var accessoriesIds = [Int]()
-    var accessories = [ECBProductDetails]()
+    var mainEntity: ECBProductDetails!
+    
+    var accessories: [ECBProductDetailsAccessory] = [] {
+        didSet {
+            if accessories.count == mainEntity.recommendedAccessories.count {
+                mainEntity.accessories = accessories
+                presenter.interactor(self, didFetch: mainEntity)
+            }
+        }
+    }
+    
+    var presenter: PCBProductDetailsProtocol!
     
     func fetch(productsWithId id: Int, for presenter: PCBProductDetailsProtocol) {
-        DispatchQueue.main.async {
-            Product.details(forId: id) { (result) in
-                switch result {
-                case .success(let productNode):
-                    presenter.interactor(self, didFetch: self.map(model: productNode.product))
-                    break
-                case .failure:
-                    break
-                }
+        self.presenter = presenter
+        Product.details(forId: id) { (result) in
+            switch result {
+            case .success(let productNode):
+                let entity = self.map(model: productNode.product)
+                self.mainEntity = entity
+            case .failure:
+                break
             }
         }
     }
     
     /// Map Response Model to Entity
     fileprivate func map(model: Product) -> ECBProductDetails {
-        
-        let dispatchGroup = DispatchGroup()
-        
-        dispatchGroup.enter()
-//        longRunningFunction { dispatchGroup.leave() }
-        
-        dispatchGroup.enter()
-//        longRunningFunctionTwo { dispatchGroup.leave() }
-        
-        dispatchGroup.notify(queue: .main) {
-            print("Both functions complete 👍")
-        }
-        
-//        var success1 = false
-//        var success2 = false
-//
-//        //For the first api call
-//        DispatchQueue.main.async {
-//            success1 = true
-//            successCode()
-//        }
-//
-//        //For the second api call
-//        DispatchQueue.main.async {
-//            success2 = true
-//            successCode()
-//        }
-//
-//        func successCode() {
-//            if ((success1 == true) && (success2 == true)) {
-//                //
-//            }
-//        }
-        
         var ecbProductDetail = ECBProductDetails()
         ecbProductDetail.id = model.id ?? 0
         ecbProductDetail.name = model.name ?? ""
@@ -75,30 +50,26 @@ class ICBProductDetails: ICBProductDetailsProtocol {
         ecbProductDetail.images = model.productImages ?? []
         ecbProductDetail.rating = model.reviewInformation?.reviewSummary?.average ?? 0.0
         ecbProductDetail.recommendedAccessories = model.recommendedAccessories ?? []
-        
-        self.accessoriesIds = ecbProductDetail.recommendedAccessories ?? []
-        
-        for item in ecbProductDetail.recommendedAccessories {
-//            self.getAccessoriesForItem(with: item)
+        ecbProductDetail.accessories = []
+        for i in ecbProductDetail.recommendedAccessories {
+            getAccessoriesForItem(id: i)
         }
-        
-//        ecbProductDetail.accessories = self.accessories
-        
         return ecbProductDetail
     }
     
-    fileprivate func getAccessoriesForItem(with id: Int) {
-        DispatchQueue.main.async {
-            Product.details(forId: id) { (result) in
-                switch result {
-                case .success(let productNode):
-                    self.accessories.append(self.map(model: productNode.product))
-                    break
-                case .failure:
-                    break
-                }
+    fileprivate func map(accessory: Product) -> ECBProductDetailsAccessory  {
+        return ECBProductDetailsAccessory(id: accessory.id ?? 0, name: accessory.name ?? "", image: accessory.productImages?.first ?? "")
+    }
+    
+    fileprivate func getAccessoriesForItem(id: Int) {
+        Product.details(forId: id) { (result) in
+            switch result {
+            case .success(let productNode):
+                let accessory = self.map(accessory: productNode.product)
+                self.accessories.append(accessory)
+            case .failure:
+                break
             }
         }
     }
-    
 }

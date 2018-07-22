@@ -11,8 +11,7 @@ import UIKit
 class RCBSearch: RCBSearchProtocol {
     
     func showProductDetails(with id: Int, from viewController: UIViewController) {
-        let productDetails = VCBProductDetails()
-        productDetails.productParams = id
+        let productDetails = VCBProductDetails(productId: id)
         viewController.navigationController?.pushViewController(productDetails, animated: true)
     }
         
