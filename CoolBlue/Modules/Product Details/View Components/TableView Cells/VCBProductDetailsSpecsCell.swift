@@ -16,6 +16,13 @@ class VCBProductDetailsSpecsCell : UITableViewCell {
             self.setUIForSpecs()
         }
     }
+    
+    let topBar : UIView = {
+        let v = UIView()
+        v.backgroundColor = UIColor.appTheme.colors.LightGray
+        v.translatesAutoresizingMaskIntoConstraints = false
+        return v
+    }()
 
     let vStackView : UIStackView = {
         let sv = UIStackView()
@@ -37,10 +44,11 @@ class VCBProductDetailsSpecsCell : UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupUI()
     }
     
     override func didMoveToWindow() {
-        setupUI()
+        self.setNeedsLayout()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -49,7 +57,9 @@ class VCBProductDetailsSpecsCell : UITableViewCell {
     
     private func setupUI() {
         self.addSubview(vStackView)
-        vStackView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 10, rightConstant: 10, widthConstant: 0, heightConstant: 0)
+        vStackView.addArrangedSubview(topBar)
+        topBar.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 10)
+        vStackView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 0)
         vStackView.addArrangedSubview(cellTitle)
         cellTitle.anchor(top: nil, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 0)
     }
@@ -63,7 +73,6 @@ class VCBProductDetailsSpecsCell : UITableViewCell {
                 vStackView.addArrangedSubview(specsUI)
                 specsUI.anchor(top: nil, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 20)
             }
-//            layoutIfNeeded()
         }
     }
     

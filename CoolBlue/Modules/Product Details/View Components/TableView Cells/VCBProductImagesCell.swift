@@ -30,7 +30,7 @@ class VCBProductImagesCell: UITableViewCell, UICollectionViewDelegateFlowLayout 
         cv.isPagingEnabled = true
         cv.delegate = self
         cv.dataSource = self
-        cv.backgroundColor = UIColor.appTheme.colors.LightGray
+        cv.backgroundColor = .clear
         cv.register(VCBProductDetailsImagesCell.self, forCellWithReuseIdentifier: productImagesCellId)
         return cv
     }()

@@ -28,6 +28,7 @@ class VCBProductDetailsUI: UIView, UICollectionViewDelegateFlowLayout {
     let defaultCellId = "productDefaultCell"
     let productImagesCellID = "productImagesCell"
     let productSpecsCellID = "productSpecsCellID"
+    let productAccessoriesCellID = "productAccessoriesCellID"
     
     lazy var tableView : UITableView = {
         let tbl = UITableView()
@@ -35,9 +36,11 @@ class VCBProductDetailsUI: UIView, UICollectionViewDelegateFlowLayout {
         tbl.dataSource = self
         tbl.separatorColor = .clear
         tbl.backgroundColor = UIColor.appTheme.colors.LightGray
+        tbl.estimatedRowHeight = UITableViewAutomaticDimension
         tbl.register(UITableViewCell.self, forCellReuseIdentifier: defaultCellId)
         tbl.register(VCBProductImagesCell.self, forCellReuseIdentifier: productImagesCellID)
         tbl.register(VCBProductDetailsSpecsCell.self, forCellReuseIdentifier: productSpecsCellID)
+        tbl.register(VCBAvailableAccessoriesCell.self, forCellReuseIdentifier: productAccessoriesCellID)
         tbl.translatesAutoresizingMaskIntoConstraints = false
         return tbl
     }()
@@ -82,7 +85,7 @@ extension VCBProductDetailsUI : UITableViewDelegate, UITableViewDataSource  {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,6 +102,11 @@ extension VCBProductDetailsUI : UITableViewDelegate, UITableViewDataSource  {
             }
             cell.specificationSummary = product?.specs
             return cell
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: productAccessoriesCellID, for: indexPath) as? VCBAvailableAccessoriesCell else {
+                fatalError("Product Specs TableView Cell Failed to Configure.")
+            }
+            return cell
         default: // Default Cell Style
             let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellId, for: indexPath) as UITableViewCell
             return cell
@@ -111,6 +119,8 @@ extension VCBProductDetailsUI : UITableViewDelegate, UITableViewDataSource  {
             return 230
         case 1:
             return UITableViewAutomaticDimension
+        case 2:
+            return 200
         default: // Default Cell Style
             return UITableViewAutomaticDimension
         }
