@@ -7,6 +7,21 @@
 //
 
 import Foundation
+import SwifterSwift
+
+//enum BooleanValue : Int, Codable {
+//    case trueValue = 1
+//    case falseValue = 0
+//
+//    var asString : String {
+//        switch self {
+//        case .trueValue:
+//            return "Yes"
+//        case .falseValue:
+//            return "No"
+//        }
+//    }
+//}
 
 // Product Specifications
 struct Specification : Codable  {
@@ -27,7 +42,7 @@ struct Specification : Codable  {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         name = try? values.decode(String.self, forKey: .name)
         stringValue = try? values.decode(String.self, forKey: .stringValue)
-        if let boolValue = try? values.decode(Bool.self, forKey: .stringValue) {
+        if let boolValue = try? values.decode(Bool.self, forKey: .booleanValue) {
             self.booleanValue = boolValue
         } else {
             self.booleanValue = false // Set default false for bool value if nil.
@@ -35,11 +50,11 @@ struct Specification : Codable  {
         
         // Unexpected Value from API Call
         do {
-            self.value = try? values.decode(String.self, forKey: .value)
+            self.value = try values.decode(String.self, forKey: .value)
         } catch DecodingError.typeMismatch {
             // There was something for the "value" key, but it wasn't a String value. Try a Bool.
             if let boolValue = try values.decodeIfPresent(Bool.self, forKey: .value) {
-                self.value = boolValue.string
+                self.value = boolValue.description
             }
         }
     }

@@ -23,6 +23,10 @@ class SpecificationUI: UIView {
     var title : UILabel = {
         let lbl = UILabel()
         lbl.text = "Specs Title"
+        lbl.numberOfLines = 1
+        lbl.lineBreakMode = .byTruncatingTail
+        lbl.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.light)
+        lbl.textColor = UIColor.appTheme.colors.BlueLight
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
@@ -30,6 +34,8 @@ class SpecificationUI: UIView {
     var value : UILabel = {
         let lbl = UILabel()
         lbl.text = "Specs Value"
+        lbl.numberOfLines = 1
+        lbl.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.light)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
@@ -48,13 +54,10 @@ class SpecificationUI: UIView {
         
         title.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.4).isActive = true
         
-        title.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        value.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        
         hStackView.addArrangedSubview(title)
         hStackView.addArrangedSubview(value)
         
-        hStackView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 20)
+        hStackView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 0)
     }
     
 }

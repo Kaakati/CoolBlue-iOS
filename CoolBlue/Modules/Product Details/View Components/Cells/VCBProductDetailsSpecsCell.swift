@@ -13,12 +13,10 @@ class VCBProductDetailsSpecsCell : UITableViewCell {
     
     var specificationSummary : [Specification]? {
         didSet {
-            self.updateConstraintsIfNeeded()
-            self.setNeedsLayout()
-            self.setNeedsDisplay()
+            self.setUIForSpecs()
         }
     }
-    
+
     let vStackView : UIStackView = {
         let sv = UIStackView()
         sv.axis = .vertical
@@ -54,16 +52,18 @@ class VCBProductDetailsSpecsCell : UITableViewCell {
         vStackView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 10, rightConstant: 10, widthConstant: 0, heightConstant: 0)
         vStackView.addArrangedSubview(cellTitle)
         cellTitle.anchor(top: nil, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 0)
+    }
+    
+    private func setUIForSpecs() {
         if let specs = specificationSummary {
             for item in specs {
                 let specsUI = SpecificationUI()
-                specsUI.anchor(top: nil, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 0)
                 specsUI.title.text = item.name
                 specsUI.value.text = item.value
                 vStackView.addArrangedSubview(specsUI)
-                self.updateConstraints()
-                self.setNeedsLayout()
+                specsUI.anchor(top: nil, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 20)
             }
+//            layoutIfNeeded()
         }
     }
     

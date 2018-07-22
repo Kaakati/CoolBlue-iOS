@@ -173,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				2BB4B26B21044C4600147B53 /* SpecificationsUI.swift */,
-				2BB4B26621044A5A00147B53 /* Cells */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -338,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				2BB4B2632103462D00147B53 /* UI Components */,
+				2BB4B26621044A5A00147B53 /* Cells */,
 				2BD5092320FA36FF004804B5 /* VCBProductDetailsUI.swift */,
 			);
 			path = "View Components";

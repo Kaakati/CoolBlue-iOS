@@ -109,6 +109,8 @@ extension VCBProductDetailsUI : UITableViewDelegate, UITableViewDataSource  {
         switch indexPath.row {
         case 0: // Images Cell
             return 230
+        case 1:
+            return UITableViewAutomaticDimension
         default: // Default Cell Style
             return UITableViewAutomaticDimension
         }
