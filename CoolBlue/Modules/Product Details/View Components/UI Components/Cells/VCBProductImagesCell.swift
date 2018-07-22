@@ -11,7 +11,11 @@ import Kingfisher
 
 class VCBProductImagesCell: UITableViewCell, UICollectionViewDelegateFlowLayout {
     
-    var productImages : [String]?
+    var productImages : [String]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     let productImagesCellId = "productImagesCellId"
     
     lazy var collectionView: UICollectionView = {
@@ -42,7 +46,7 @@ class VCBProductImagesCell: UITableViewCell, UICollectionViewDelegateFlowLayout 
     
     private func setupUI() {
         self.addSubview(collectionView)
-        collectionView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        collectionView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 5, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
     
 }
@@ -50,15 +54,14 @@ class VCBProductImagesCell: UITableViewCell, UICollectionViewDelegateFlowLayout 
 // Collection View
 extension VCBProductImagesCell : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return productImages!.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let item = collectionView.dequeueReusableCell(withReuseIdentifier: productImagesCellId, for: indexPath) as? VCBProductDetailsImagesCell else {
             fatalError("Product Details CollectionView Cell Failed to Configure.")
         }
-        
-        
+
         if productImages != nil {
             let imageURL = URL(string: productImages![indexPath.row])
             item.imageView.kf.setImage(with: imageURL)
@@ -102,30 +105,4 @@ extension VCBProductImagesCell : UICollectionViewDelegate, UICollectionViewDataS
         }
     }
 
-}
-
-
-class VCBProductDetailsImagesCell : UICollectionViewCell {
-    
-    let imageView : UIImageView = {
-        let iv = UIImageView()
-        iv.contentMode = .scaleAspectFill
-        iv.image = UIImage(named: "")
-        iv.translatesAutoresizingMaskIntoConstraints = false
-        return iv
-    }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupUI()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func setupUI() {
-        self.addSubview(imageView)
-        imageView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    }
 }

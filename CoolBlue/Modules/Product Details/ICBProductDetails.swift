@@ -27,13 +27,13 @@ class ICBProductDetails: ICBProductDetailsProtocol {
         var ecbProductDetail = ECBProductDetails()
         ecbProductDetail.id = model.id ?? 0
         ecbProductDetail.name = model.name ?? ""
-//        ecbProductDetail.image = model.image ?? ""
+        ecbProductDetail.usps = model.usps ?? []
+        ecbProductDetail.specs = model.specificationSummary
         ecbProductDetail.price = model.salesPriceIncVat?.string ?? 0.string
         ecbProductDetail.nextDayDelivery = model.availabilityState?.asString ?? ""
         ecbProductDetail.totalRating = String(describing: model.reviewInformation?.reviewSummary?.count ?? 0) + " Reviews"
         ecbProductDetail.promoText = model.promoText ?? ""
-//        ecbProductDetail.promoIcon = UIImage(named: model.promoIcon?.text ?? "")
-        ecbProductDetail.usps = model.usps ?? []
+        ecbProductDetail.images = model.productImages ?? []
         ecbProductDetail.rating = model.reviewInformation?.reviewSummary?.average ?? 0.0
         return ecbProductDetail
     }

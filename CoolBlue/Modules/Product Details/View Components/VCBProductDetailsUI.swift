@@ -14,15 +14,20 @@ protocol VCBProductDetailsUIDelegate {
 }
 
 protocol VCBProductDetailsUIDataSource {
-
+    func productFor(view: VCBProductDetailsUI) -> ECBProductDetails
 }
 
 class VCBProductDetailsUI: UIView, UICollectionViewDelegateFlowLayout {
     
-    var product : ECBProductDetails?
+    var product : ECBProductDetails? {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
-    let productImagesCellID = "productImagesCell"
     let defaultCellId = "productDefaultCell"
+    let productImagesCellID = "productImagesCell"
+    let productSpecsCellID = "productSpecsCellID"
     
     lazy var tableView : UITableView = {
         let tbl = UITableView()
@@ -32,6 +37,7 @@ class VCBProductDetailsUI: UIView, UICollectionViewDelegateFlowLayout {
         tbl.backgroundColor = UIColor.appTheme.colors.LightGray
         tbl.register(UITableViewCell.self, forCellReuseIdentifier: defaultCellId)
         tbl.register(VCBProductImagesCell.self, forCellReuseIdentifier: productImagesCellID)
+        tbl.register(VCBProductDetailsSpecsCell.self, forCellReuseIdentifier: productSpecsCellID)
         tbl.translatesAutoresizingMaskIntoConstraints = false
         return tbl
     }()
@@ -63,6 +69,10 @@ class VCBProductDetailsUI: UIView, UICollectionViewDelegateFlowLayout {
         // add constraints to subviews
         tableView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
+    
+    func reloadData() {
+        self.product = dataSource?.productFor(view: self)
+    }
 }
 
 // Table View
@@ -81,11 +91,16 @@ extension VCBProductDetailsUI : UITableViewDelegate, UITableViewDataSource  {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: productImagesCellID, for: indexPath) as? VCBProductImagesCell else {
                 fatalError("Product Details TableView Cell Failed to Configure.")
             }
+            cell.productImages = product?.images ?? []
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: productSpecsCellID, for: indexPath) as? VCBProductDetailsSpecsCell else {
+                fatalError("Product Specs TableView Cell Failed to Configure.")
+            }
+            cell.specificationSummary = product?.specs
             return cell
         default: // Default Cell Style
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellId, for: indexPath) as? UITableViewCell else {
-                fatalError("Product Details TableView Cell Failed to Configure.")
-            }
+            let cell = tableView.dequeueReusableCell(withIdentifier: defaultCellId, for: indexPath) as UITableViewCell
             return cell
         }
     }
@@ -95,7 +110,7 @@ extension VCBProductDetailsUI : UITableViewDelegate, UITableViewDataSource  {
         case 0: // Images Cell
             return 230
         default: // Default Cell Style
-            return 175
+            return UITableViewAutomaticDimension
         }
     }
 }

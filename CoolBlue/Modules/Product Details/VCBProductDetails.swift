@@ -9,34 +9,34 @@
 import UIKit
 
 class VCBProductDetails: UIViewController {
-
+    
+    var productParams : Int? = 0
+    
 	fileprivate let ui = VCBProductDetailsUI()
 	fileprivate var presenter: PCBProductDetailsProtocol!
     
-    var product : ECBProductDetails? {
-        didSet {
-            
-        }
-    }
+    fileprivate var product : ECBProductDetails = ECBProductDetails()
     
 	override func loadView() {
 		ui.delegate = self
 		ui.dataSource = self
 		view = ui
-  }
+    }
 
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         presenter = PCBProductDetails(view: self)
         self.title = "Product Details"
-        presenter.fetch(productWithId: 785359, for: self)
-  }
+//        presenter.fetch(productWithId: 785359, for: self)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationController?.navigationBar.tintColor = UIColor.appTheme.colors.BlueLight
         UIApplication.shared.statusBarView?.backgroundColor = UIColor.appTheme.colors.LightGray
+        
+        presenter.fetch(productWithId: productParams! ?? 0, for: self)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -50,6 +50,9 @@ extension VCBProductDetails: VCBProductDetailsProtocol {
     
     func shouldSet(product: ECBProductDetails) {
         self.product = product
+        DispatchQueue.main.async {
+            self.ui.reloadData()
+        }
     }
     
 
@@ -60,5 +63,9 @@ extension VCBProductDetails: VCBProductDetailsUIDelegate {
 }
 
 extension VCBProductDetails: VCBProductDetailsUIDataSource {
+    func productFor(view: VCBProductDetailsUI) -> ECBProductDetails {
+        return self.product
+    }
+    
 
 }

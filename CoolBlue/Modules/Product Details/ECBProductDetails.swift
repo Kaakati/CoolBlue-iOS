@@ -19,5 +19,6 @@ struct ECBProductDetails {
     var price : String = ""
     var nextDayDelivery : String = "Next Day Delivery"
     var images : [String]?
+    var specs : [Specification]?
     
 }
