@@ -19,6 +19,20 @@ class VCBAvailableAccessoriesCell: UITableViewCell, UICollectionViewDelegateFlow
     
     let productImagesCellId = "productAccessoriesCellId"
     
+    let topBar : UIView = {
+        let v = UIView()
+        v.backgroundColor = UIColor.appTheme.colors.LightGray
+        v.translatesAutoresizingMaskIntoConstraints = false
+        return v
+    }()
+    
+    let titleForSection : UILabel = {
+        let lbl = UILabel()
+        lbl.text = "Recomended Accessories"
+        lbl.font = UIFont.boldSystemFont(ofSize: 16)
+        return lbl
+    }()
+    
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         // ... layout parameters
@@ -46,8 +60,13 @@ class VCBAvailableAccessoriesCell: UITableViewCell, UICollectionViewDelegateFlow
     }
     
     private func setupUI() {
+        // Better Add The Views to a Vertical StackView
+        self.addSubview(topBar)
+        self.addSubview(titleForSection)
         self.addSubview(collectionView)
-        collectionView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 5, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        topBar.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 10, rightConstant: 0, widthConstant: 0, heightConstant: 10)
+        titleForSection.anchor(top: topBar.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 10, rightConstant: 10, widthConstant: 0, heightConstant: 20)
+        collectionView.anchor(top: titleForSection.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 5, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
     
 }
@@ -76,34 +95,5 @@ extension VCBAvailableAccessoriesCell : UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (UIScreen.main.bounds.width * 0.3), height: 165)
     }
-    
-//    // AutoSnap Cell to Center
-//    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-//        if !decelerate {
-//            scrollToNearestVisibleCollectionViewCell()
-//        }
-//    }
-//
-//    // MARK: AutoSnap Cell to Center
-//    func scrollToNearestVisibleCollectionViewCell() {
-//        let visibleCenterPositionOfScrollView = Float(collectionView.contentOffset.x + (self.collectionView.bounds.size.width / 2))
-//        var closestCellIndex = -1
-//        var closestDistance: Float = .greatestFiniteMagnitude
-//        for i in 0..<collectionView.visibleCells.count {
-//            let cell = collectionView.visibleCells[i]
-//            let cellWidth = cell.bounds.size.width
-//            let cellCenter = Float(cell.frame.origin.x + cellWidth / 2)
-//
-//            // Now calculate closest cell
-//            let distance: Float = fabsf(visibleCenterPositionOfScrollView - cellCenter)
-//            if distance < closestDistance {
-//                closestDistance = distance
-//                closestCellIndex = collectionView.indexPath(for: cell)!.row
-//            }
-//        }
-//        if closestCellIndex != -1 {
-//            self.collectionView.scrollToItem(at: IndexPath(row: closestCellIndex, section: 0), at: .centeredHorizontally, animated: true)
-//        }
-//    }
     
 }

@@ -20,5 +20,14 @@ struct ECBProductDetails {
     var nextDayDelivery : String = "Next Day Delivery"
     var images : [String]?
     var specs : [Specification]?
-    
+    var recommendedAccessories : [Int] = []
+    var accessories : [ECBProductDetails] = []
 }
+
+//struct ECBProductDetails {
+//    
+//    var id : Int = 0
+//    var name : String = "Product Name"
+//    var images : [String]?
+//    
+//}

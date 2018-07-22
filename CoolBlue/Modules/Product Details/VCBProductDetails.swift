@@ -34,7 +34,7 @@ class VCBProductDetails: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationController?.navigationBar.tintColor = UIColor.appTheme.colors.BlueLight
-        UIApplication.shared.statusBarView?.backgroundColor = UIColor.appTheme.colors.LightGray
+//        UIApplication.shared.statusBarView?.backgroundColor = UIColor.appTheme.colors.LightGray
         
         presenter.fetch(productWithId: productParams! ?? 0, for: self)
     }

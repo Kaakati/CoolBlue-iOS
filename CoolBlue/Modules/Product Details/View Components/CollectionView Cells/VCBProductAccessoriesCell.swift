@@ -23,7 +23,6 @@ class VCBProductAccessoriesCell : UICollectionViewCell {
     let imageView : UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
-        iv.backgroundColor = .white
         iv.image = UIImage(named: "")
         iv.clipsToBounds = true
         iv.translatesAutoresizingMaskIntoConstraints = false
@@ -33,6 +32,8 @@ class VCBProductAccessoriesCell : UICollectionViewCell {
     let title : UILabel = {
         let lbl = UILabel()
         lbl.text = "Item Label"
+        lbl.textColor = UIColor.appTheme.colors.BlueLight
+        lbl.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.light)
         return lbl
     }()
     
@@ -46,9 +47,13 @@ class VCBProductAccessoriesCell : UICollectionViewCell {
     }
     
     private func setupUI() {
+        self.backgroundColor = .white
         self.addSubview(vStackView)
+        self.layer.borderColor = UIColor.appTheme.colors.LightGray?.cgColor
+        self.layer.borderWidth = 1
         vStackView.addArrangedSubview(imageView)
         vStackView.addArrangedSubview(title)
+        title.heightAnchor.constraint(equalToConstant: 20).isActive = true
         vStackView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 10, rightConstant: 10, widthConstant: 0, heightConstant: 0)
     }
 }
